@@ -301,3 +301,202 @@
       background: #f8fafc;
       padding: 20px;
       text-align: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      .content { padding: 20px 15px; }
+      .hero h1 { font-size: 1.6rem; }
+      .btn-access-app { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- HERO HEADER -->
+    <header class="hero">
+      <span class="hero-badge">BOP N° 82 • Candelaria</span>
+      <h1>Guía Rápida de Uso: Plataforma Escolar</h1>
+      <p>Gestión eficiente de Horarios Institucionales y Control Diario de Asistencia Docente en un solo lugar.</p>
+      
+      <!-- BOTÓN DE ACCESO DIRECTO PRINCIPAL -->
+      <div class="btn-access-container">
+        <a href="https://script.google.com/macros/s/AKfycbw1PX4XKZQf4W6mcjx48j5PqSw5XBtF2XmeXvPfmrihDromb7Xv2jfFZl05533IBCeU/exec" target="_blank" class="btn-access-app">
+          🚀 Ingressar a la Plataforma Web
+        </a>
+        <span class="google-notice">
+          🔒 Requisito: Debe estar registrado e iniciar sesión con su cuenta de Google.
+        </span>
+      </div>
+    </header>
+
+    <main class="content">
+      
+      <!-- SECCIÓN 1: BENEFICIOS -->
+      <section>
+        <h2 class="section-title">🚀 ¿Por qué usar la nueva plataforma?</h2>
+        <div class="benefits-grid">
+          
+          <div class="benefit-card success">
+            <div class="benefit-icon">⏱️</div>
+            <h3>Ahorro de Tiempo</h3>
+            <p>Se acabó la carga manual repetitiva. Con un par de clics registras el parte diario completo del turno sin buscar planilla por planilla.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">👤</div>
+            <h3>Cero Duplicaciones</h3>
+            <p>Visualización unificada por docente. Cada profesor aparece <strong>una sola vez</strong> agrupando sus cursos y horas correspondientes.</p>
+          </div>
+
+          <div class="benefit-card accent">
+            <div class="benefit-icon">🖨️</div>
+            <h3>Partes Limpios en 1 Clic</h3>
+            <p>Genera e imprime el reporte diario listo para firma física. Incluye solo los datos esenciales sin sobrecargar de información la hoja.</p>
+          </div>
+
+          <div class="benefit-card warning">
+            <div class="benefit-icon">🔒</div>
+            <h3>Seguridad e Historial</h3>
+            <p>El sistema crea pestañas mensuales automáticamente en Google Sheets y registra la fecha, hora y usuario que realizó cada carga.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: HORARIOS INSTITUCIONALES -->
+      <section>
+        <h2 class="section-title">📅 1. Horarios Institucionales</h2>
+        
+        <div class="feature-block">
+          <h3>Novedad: Reemplazo Masivo de Docente</h3>
+          <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text-muted);">
+            Cuando un docente toma suplencia o hay cambios de titularidad, no es necesario editar clase por clase. El sistema actualiza todas las instancias del curso seleccionado de forma automática.
+          </p>
+
+          <ol class="step-list">
+            <li>Presiona el botón amarillo <span class="btn-badge warning">🔄 Reemplazar Docente</span> en la barra superior.</li>
+            <li>Selecciona el <strong>Curso</strong> en el menú desplegable. El sistema filtrará automáticamente las materias pertenecientes a ese curso.</li>
+            <li>Elige la <strong>Materia</strong>. La plataforma te mostrará el nombre del <em>Docente Actual</em> registrado.</li>
+            <li>Escribe el nombre del <strong>Nuevo Docente</strong> y presiona <strong>Actualizar Docente</strong>.</li>
+          </ol>
+
+          <div class="info-box">
+            💡 <strong>Tip de Impresión:</strong> Puedes hacer clic en <span class="btn-badge primary">🖨️ Imprimir Horarios</span> para obtener la grilla completa en PDF o papel. Los paneles laterales de navegación y botones se ocultarán automáticamente en la impresión.
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: CONTROL DE ASISTENCIA -->
+      <section>
+        <h2 class="section-title">📋 2. Control de Asistencia Docente</h2>
+        
+        <div class="feature-block">
+          <h3>Carga Diaria de Presentismo y Ausencias</h3>
+
+          <ol class="step-list">
+            <li>Ingresa a la pestaña <strong>📋 Control de Asistencia Docente</strong>.</li>
+            <li>Selecciona la <strong>Fecha</strong> y el <strong>Turno</strong> (Mañana, Tarde o Noche). Presiona <span class="btn-badge primary">🔍 Cargar Docentes del Día</span>.</li>
+            <li>Verás la tarjeta individual de cada docente con la suma total de sus horas cátedra y el detalle de materias que dicta ese día.</li>
+            <li>Selecciona el estado de asistencia para cada profesor:
+              <ul style="margin-top: 8px; margin-left: 20px; list-style: disc;">
+                <li><span class="state-pill state-presente">Presente</span> (Estado por defecto)</li>
+                <li><span class="state-pill state-ausente">Ausente</span> (Resalta en color rojo)</li>
+                <li><span class="state-pill state-licencia">Licencia / Justificado</span> (Resalta en amarillo)</li>
+              </ul>
+            </li>
+            <li>Si el docente falta o tiene licencia, escribe la causa o artículo en la casilla <em>Observaciones / Motivo</em>.</li>
+            <li>Haz clic en el botón verde <span class="btn-badge success">💾 Guardar Asistencia en Pestaña del Mes</span> para almacenar los registros en la planilla.</li>
+          </ol>
+        </div>
+
+        <div class="feature-block">
+          <h3>🖨️ Impresión del Parte Diario (Reporte)</h3>
+          <p style="margin-bottom: 12px; font-size: 0.95rem; color: var(--text-muted);">
+            Para generar la planilla de firmas o entregar en Secretaría/Dirección:
+          </p>
+          
+          <ol class="step-list">
+            <li>Haz clic en el botón azul de la barra superior: <span class="btn-badge primary">🖨️ Imprimir Reporte</span>.</li>
+            <li>El sistema generará automáticamente una hoja limpia que contiene <strong>exclusivamente</strong>:
+              <ul style="margin-top: 6px; margin-left: 20px; list-style: circle;">
+                <li>Encabezado Institucional del BOP N° 82, Fecha, Día y Turno.</li>
+                <li>Listado de Docentes con su Estado y Observaciones.</li>
+                <li>Pie de página con recuadros para Firma de Preceptor/a y Dirección.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="info-box" style="background-color: #fff3cd; border-left-color: #ffc107; color: #856404;">
+            ✨ <strong>Sintetizado:</strong> Se han omitido los cursos y materias en la impresión del reporte diario a fin de presentar un formato legible, ejecutivo y de rápido despacho.
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: TABLA DE REFERENCIA -->
+      <section>
+        <h2 class="section-title">📌 Guía de Botones Principales</h2>
+        <table class="ref-table">
+          <thead>
+            <tr>
+              <th>Botón</th>
+              <th>Ubicación</th>
+              <th>Función Principal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="btn-badge success">➕ Adicionar Clase</span></td>
+              <td>Horarios</td>
+              <td>Agrega una nueva materia, curso o comisión a la grilla base.</td>
+            </tr>
+            <tr>
+              <td><span class="btn-badge warning">🔄 Reemplazar Docente</span></td>
+              <td>Horarios</td>
+              <td>Cambia masivamente el profesor asignado a un curso/materia.</td>
+            </tr>
+            <tr>
+              <td><span class="btn-badge primary">🔍 Cargar Docentes</span></td>
+              <td>Asistencia</td>
+              <td>Consulta o genera la nómina de docentes del día seleccionado.</td>
+            </tr>
+            <tr>
+              <td><span class="btn-badge success">💾 Guardar Asistencia</span></td>
+              <td>Asistencia</td>
+              <td>Guarda y consolida el parte diario en la pestaña mensual del Sheets.</td>
+            </tr>
+            <tr>
+              <td><span class="btn-badge primary">🖨️ Imprimir Reporte</span></td>
+              <td>Asistencia</td>
+              <td>Imprime el parte diario simplificado listo para firma en papel.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- CALL TO ACTION FINAL -->
+      <section class="cta-block">
+        <h3>¿Listo para comenzar a utilizar el sistema?</h3>
+        <p style="margin-bottom: 15px; color: var(--text-muted);">
+          Recuerde tener su cuenta de Google institucional/autorizada abierta en su navegador.
+        </p>
+        <a href="https://script.google.com/macros/s/AKfycbw1PX4XKZQf4W6mcjx48j5PqSw5XBtF2XmeXvPfmrihDromb7Xv2jfFZl05533IBCeU/exec" target="_blank" class="btn-access-app">
+          🚀 Acceder a la Plataforma Escolar
+        </a>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <strong>Bachillerato Orientado Provincial N° 82</strong> • Candelaria, Misiones<br>
+      Sistema de Gestión Web e Integración con Google Workspace
+    </footer>
+  </div>
+
+</body>
+</html>
