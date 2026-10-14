@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manual de Uso — Plataforma Escolar BOP N° 82</title>
+  <title>Manual de Uso v2.0 — Plataforma Escolar BOP N° 82</title>
   <style>
     :root {
       --azul: #389fd6;
@@ -16,6 +16,7 @@
       --gris-borde: #dee2e6;
       --texto: #2b2b2b;
       --texto-suave: #6c757d;
+      --nuevo: #8e44ad;
     }
 
     * { box-sizing: border-box; }
@@ -31,7 +32,7 @@
 
     .layout {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 290px 1fr;
       min-height: 100vh;
     }
 
@@ -127,10 +128,24 @@
       letter-spacing: 0.5px;
     }
 
+    .nav-badge-nuevo {
+      display: inline-block;
+      background: var(--nuevo);
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 8px;
+      margin-left: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      vertical-align: middle;
+    }
+
     /* CONTENIDO */
     .content {
       padding: 40px 50px;
-      max-width: 1000px;
+      max-width: 1050px;
       background: #ffffff;
       margin: 0 auto;
       width: 100%;
@@ -172,10 +187,7 @@
 
     .content p { margin: 10px 0; }
 
-    .content ul, .content ol {
-      padding-left: 24px;
-    }
-
+    .content ul, .content ol { padding-left: 24px; }
     .content li { margin-bottom: 6px; }
 
     .content code {
@@ -187,22 +199,6 @@
       color: #c7254e;
     }
 
-    .content pre {
-      background: #2b2b2b;
-      color: #f8f8f2;
-      padding: 16px 20px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
-
-    .content pre code {
-      background: none;
-      color: inherit;
-      padding: 0;
-    }
-
     /* CALLOUTS */
     .callout {
       padding: 14px 18px;
@@ -211,34 +207,14 @@
       border-left: 5px solid;
       font-size: 0.92rem;
     }
-
-    .callout-info {
-      background: #e7f4ff;
-      border-color: var(--azul);
-      color: #0c5460;
-    }
-
-    .callout-warning {
-      background: #fff3cd;
-      border-color: var(--amarillo);
-      color: #856404;
-    }
-
-    .callout-danger {
-      background: #f8d7da;
-      border-color: var(--rojo);
-      color: #842029;
-    }
-
-    .callout-success {
-      background: #d1e7dd;
-      border-color: var(--verde);
-      color: #0f5132;
-    }
-
+    .callout-info    { background: #e7f4ff; border-color: var(--azul);     color: #0c5460; }
+    .callout-warning { background: #fff3cd; border-color: var(--amarillo); color: #856404; }
+    .callout-danger  { background: #f8d7da; border-color: var(--rojo);     color: #842029; }
+    .callout-success { background: #d1e7dd; border-color: var(--verde);    color: #0f5132; }
+    .callout-nuevo   { background: #f4ecf7; border-color: var(--nuevo);    color: #5b2c6f; }
     .callout strong { display: block; margin-bottom: 4px; }
 
-    /* CAJA DE ACCESO DESTACADA */
+    /* CAJA DE ACCESO */
     .access-box {
       background: linear-gradient(135deg, #f0fdf4 0%, #e6f7ec 100%);
       border: 2px solid var(--verde);
@@ -304,18 +280,6 @@
 
     .content tr:nth-child(even) td {
       background: var(--gris-claro);
-    }
-
-    /* ATAJOS / KBD */
-    kbd {
-      background: #f8f9fa;
-      border: 1px solid var(--gris-borde);
-      border-bottom-width: 2px;
-      border-radius: 4px;
-      padding: 2px 6px;
-      font-family: 'SF Mono', Consolas, monospace;
-      font-size: 0.85em;
-      color: #333;
     }
 
     /* PASOS NUMERADOS */
@@ -393,10 +357,52 @@
       font-size: 0.78rem;
       font-weight: 700;
     }
-
     .badge-presente { background: #d1e7dd; color: #0f5132; }
     .badge-ausente  { background: #f8d7da; color: #842029; }
     .badge-licencia { background: #fff3cd; color: #664d03; }
+
+    /* CHIP DEMO */
+    .chip-demo {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #389fd6;
+      color: #fff;
+      padding: 4px 6px 4px 10px;
+      border-radius: 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin: 4px 4px 4px 0;
+    }
+    .chip-demo .chip-col {
+      background: rgba(255,255,255,0.25);
+      padding: 1px 6px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .chip-demo .chip-cerrar {
+      background: rgba(255,255,255,0.25);
+      border: none;
+      color: #fff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    .chip-limpiar-demo {
+      display: inline-block;
+      background: #d9381e;
+      color: #fff;
+      border-radius: 16px;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-left: 8px;
+    }
 
     /* IMPRESIÓN */
     @media print {
@@ -441,7 +447,6 @@
       margin-top: 20px;
     }
 
-    /* BOTÓN DE ACCESO EN PORTADA */
     .cover .btn-cover-access {
       display: inline-block;
       background: #ffffff;
@@ -481,14 +486,48 @@
       .toc ol { column-count: 1; }
     }
 
-    .toc a {
-      color: var(--texto);
-      text-decoration: none;
+    .toc a { color: var(--texto); text-decoration: none; }
+    .toc a:hover { color: var(--azul); text-decoration: underline; }
+
+    /* NOVEDADES */
+    .novedades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
     }
 
-    .toc a:hover {
-      color: var(--azul);
-      text-decoration: underline;
+    .novedad-card {
+      background: #faf5fc;
+      border: 1px solid #e8d5f0;
+      border-left: 5px solid var(--nuevo);
+      border-radius: 8px;
+      padding: 16px 18px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .novedad-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(142, 68, 173, 0.15);
+    }
+
+    .novedad-card h4 {
+      margin: 0 0 8px 0;
+      color: var(--nuevo);
+      font-size: 0.98rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .novedad-card .icono {
+      font-size: 1.2rem;
+    }
+
+    .novedad-card p {
+      margin: 6px 0 0 0;
+      font-size: 0.85rem;
+      color: #555;
     }
   </style>
 </head>
@@ -503,44 +542,46 @@
       <h1>Manual de Uso</h1>
     </div>
 
-    <!-- ACCESO RÁPIDO A LA PLATAFORMA -->
+    <!-- ACCESO RÁPIDO -->
     <a class="sidebar-cta"
-       href="https://script.google.com/macros/s/AKfycbwVTMy8CkzHO8gmyea3c_wBIExItXaNkWGNI-Cyy79TroZq4-LQ6eehKNy98b80Q2nY/exec"
-       target="_blank"
-       rel="noopener">
+       href="https://script.google.com/macros/s/AKfycbx4-E-9JUKWeH_NOSKB5vpHF4qXEY6kM2tVP0TWvZKTaCly-6C3zP-79Rf12mR1t14q/exec"
+       target="_blank" rel="noopener">
       🚀 Ingresar a la plataforma
     </a>
 
     <nav>
       <ul>
         <li class="nav-group">Introducción</li>
+        <li><a href="#novedades">🆕 Novedades v2.0</a></li>
         <li><a href="#intro">1. ¿Qué es la plataforma?</a></li>
         <li><a href="#acceso">2. Cómo acceder</a></li>
         <li><a href="#navegacion">3. Navegación general</a></li>
 
         <li class="nav-group">Módulo 1 — Horarios</li>
         <li><a href="#horarios-ver">4. Ver y filtrar</a></li>
-        <li><a href="#horarios-editar">5. Agregar / Editar clases</a></li>
-        <li><a href="#horarios-eliminar">6. Eliminar una clase</a></li>
-        <li><a href="#horarios-reemplazo">7. Reemplazo masivo</a></li>
-        <li><a href="#horarios-imprimir">8. Imprimir grilla</a></li>
+        <li><a href="#filtros-click">5. Filtros click-on <span class="nav-badge-nuevo">Nuevo</span></a></li>
+        <li><a href="#horarios-editar">6. Agregar / Editar clases</a></li>
+        <li><a href="#horarios-eliminar">7. Eliminar una clase</a></li>
+        <li><a href="#horarios-reemplazo">8. Reemplazo masivo</a></li>
+        <li><a href="#horarios-imprimir">9. Imprimir grilla</a></li>
 
         <li class="nav-group">Módulo 2 — Asistencia</li>
-        <li><a href="#asist-cargar">9. Cargar asistencia</a></li>
-        <li><a href="#asist-estados">10. Estados y observaciones</a></li>
-        <li><a href="#asist-validacion">11. Validación de día hábil</a></li>
-        <li><a href="#asist-guardar">12. Guardar asistencia</a></li>
-        <li><a href="#asist-imprimir">13. Imprimir parte diario</a></li>
+        <li><a href="#asist-cargar">10. Cargar asistencia</a></li>
+        <li><a href="#asist-estados">11. Estados y observaciones</a></li>
+        <li><a href="#asist-validacion">12. Validación de día hábil</a></li>
+        <li><a href="#asist-filtros">13. Filtros click-on <span class="nav-badge-nuevo">Nuevo</span></a></li>
+        <li><a href="#asist-guardar">14. Guardar asistencia</a></li>
+        <li><a href="#asist-imprimir">15. Imprimir parte diario</a></li>
 
         <li class="nav-group">Módulo 3 — Adjuntos</li>
-        <li><a href="#adj-cargar">14. Cargar un archivo</a></li>
-        <li><a href="#adj-ver">15. Ver adjuntos cargados</a></li>
-        <li><a href="#adj-errores">16. Errores frecuentes</a></li>
+        <li><a href="#adj-cargar">16. Cargar un archivo</a></li>
+        <li><a href="#adj-ver">17. Ver adjuntos cargados</a></li>
+        <li><a href="#adj-errores">18. Errores frecuentes</a></li>
 
         <li class="nav-group">Anexos</li>
-        <li><a href="#preguntas">17. Preguntas frecuentes</a></li>
-        <li><a href="#glosario">18. Glosario</a></li>
-        <li><a href="#soporte">19. Soporte técnico</a></li>
+        <li><a href="#preguntas">19. Preguntas frecuentes</a></li>
+        <li><a href="#glosario">20. Glosario</a></li>
+        <li><a href="#soporte">21. Soporte técnico</a></li>
       </ul>
     </nav>
   </aside>
@@ -555,35 +596,81 @@
       <p>Gestión de Horarios · Asistencia Docente · Adjuntos</p>
 
       <a class="btn-cover-access"
-         href="https://script.google.com/macros/s/AKfycbwVTMy8CkzHO8gmyea3c_wBIExItXaNkWGNI-Cyy79TroZq4-LQ6eehKNy98b80Q2nY/exec"
-         target="_blank"
-         rel="noopener">
+         href="https://script.google.com/macros/s/AKfycbx4-E-9JUKWeH_NOSKB5vpHF4qXEY6kM2tVP0TWvZKTaCly-6C3zP-79Rf12mR1t14q/exec"
+         target="_blank" rel="noopener">
         🚀 Ingresar a la plataforma
       </a>
 
       <br>
-      <span class="version">Manual de Uso · Versión 1.1 · 2026</span>
+      <span class="version">Manual de Uso · Versión 2.0 · 2026</span>
+    </div>
+
+    <!-- ==================== NOVEDADES ==================== -->
+    <h2 id="novedades">🆕 Novedades de la versión 2.0</h2>
+
+    <p>Esta versión incorpora <strong>mejoras significativas de usabilidad</strong> pensadas para agilizar el trabajo diario de preceptoría y dirección.</p>
+
+    <div class="novedades-grid">
+
+      <div class="novedad-card">
+        <h4><span class="icono">🖱️</span> Filtros click-on</h4>
+        <p>Hacé clic en cualquier celda de la grilla de horarios para agregarla como filtro rápido. Combinables, con chips visuales y botón "Limpiar todos".</p>
+      </div>
+
+      <div class="novedad-card">
+        <h4><span class="icono">🎯</span> Filtros en asistencia</h4>
+        <p>Clic en el nombre del docente, la materia o el curso para filtrar el listado de asistencia en tiempo real.</p>
+      </div>
+
+      <div class="novedad-card">
+        <h4><span class="icono">📊</span> Contador en vivo</h4>
+        <p>Se muestra en tiempo real cuántos resultados coinciden con los filtros aplicados.</p>
+      </div>
+
+      <div class="novedad-card">
+        <h4><span class="icono">🔗</span> Nuevo enlace de acceso</h4>
+        <p>La plataforma cuenta con una URL actualizada, integrada en este manual con botones de acceso directo.</p>
+      </div>
+
+      <div class="novedad-card">
+        <h4><span class="icono">🔒</span> Trazabilidad reforzada</h4>
+        <p>Los archivos adjuntos llevan siempre el email real del usuario que los carga. Validación estricta de identidad.</p>
+      </div>
+
+      <div class="novedad-card">
+        <h4><span class="icono">📅</span> Validación de feriados</h4>
+        <p>El sistema bloquea la carga de asistencia en feriados registrados en la pestaña "Feriados" de la planilla.</p>
+      </div>
+
+    </div>
+
+    <div class="callout callout-nuevo">
+      <strong>📌 Recomendación</strong>
+      Si ya usabas la versión anterior, no hace falta que hagas nada: los datos siguen intactos. Solo tenés que actualizar el acceso con el nuevo enlace.
     </div>
 
     <!-- ÍNDICE -->
     <div class="toc">
       <h3>Contenido</h3>
       <ol>
+        <li><a href="#novedades">Novedades v2.0</a></li>
         <li><a href="#intro">Introducción</a></li>
         <li><a href="#acceso">Acceso a la plataforma</a></li>
         <li><a href="#navegacion">Navegación general</a></li>
         <li><a href="#horarios-ver">Módulo 1: Ver y filtrar horarios</a></li>
+        <li><a href="#filtros-click">Módulo 1: Filtros click-on</a></li>
         <li><a href="#horarios-editar">Módulo 1: Agregar y editar clases</a></li>
         <li><a href="#horarios-eliminar">Módulo 1: Eliminar una clase</a></li>
-        <li><a href="#horarios-reemplazo">Módulo 1: Reemplazo masivo de docentes</a></li>
+        <li><a href="#horarios-reemplazo">Módulo 1: Reemplazo masivo</a></li>
         <li><a href="#horarios-imprimir">Módulo 1: Imprimir grilla</a></li>
         <li><a href="#asist-cargar">Módulo 2: Cargar asistencia docente</a></li>
         <li><a href="#asist-estados">Módulo 2: Estados y observaciones</a></li>
         <li><a href="#asist-validacion">Módulo 2: Validación de día hábil</a></li>
+        <li><a href="#asist-filtros">Módulo 2: Filtros click-on</a></li>
         <li><a href="#asist-guardar">Módulo 2: Guardar asistencia</a></li>
         <li><a href="#asist-imprimir">Módulo 2: Imprimir parte diario</a></li>
-        <li><a href="#adj-cargar">Módulo 3: Cargar un archivo adjunto</a></li>
-        <li><a href="#adj-ver">Módulo 3: Ver adjuntos cargados</a></li>
+        <li><a href="#adj-cargar">Módulo 3: Cargar adjunto</a></li>
+        <li><a href="#adj-ver">Módulo 3: Ver adjuntos</a></li>
         <li><a href="#adj-errores">Módulo 3: Errores frecuentes</a></li>
         <li><a href="#preguntas">Preguntas frecuentes</a></li>
         <li><a href="#glosario">Glosario</a></li>
@@ -599,7 +686,7 @@
     <ul>
       <li><strong>Módulo 1 — Horarios:</strong> consultar, filtrar y administrar la grilla de clases de toda la institución.</li>
       <li><strong>Módulo 2 — Asistencia Docente:</strong> registrar la presencia diaria del personal por turno (Mañana, Tarde, Noche).</li>
-      <li><strong>Módulo 3 — Adjuntos:</strong> subir PDF o imágenes asociadas a un docente y fecha (certificados, licencias, justificaciones, etc.) a una carpeta compartida de Google Drive.</li>
+      <li><strong>Módulo 3 — Adjuntos:</strong> subir PDF o imágenes asociadas a un docente y fecha (certificados, licencias, justificaciones) a una carpeta compartida de Google Drive.</li>
     </ul>
 
     <div class="callout callout-info">
@@ -611,28 +698,12 @@
 
     <table>
       <thead>
-        <tr>
-          <th>Perfil</th>
-          <th>Acceso</th>
-          <th>Tareas principales</th>
-        </tr>
+        <tr><th>Perfil</th><th>Acceso</th><th>Tareas principales</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td><strong>Preceptor/a</strong></td>
-          <td>Completo</td>
-          <td>Cargar asistencia, adjuntar archivos, imprimir partes diarios.</td>
-        </tr>
-        <tr>
-          <td><strong>Dirección / Secretaría</strong></td>
-          <td>Completo</td>
-          <td>Consultar horarios, validar asistencias, gestionar reemplazos.</td>
-        </tr>
-        <tr>
-          <td><strong>Administrador del sistema</strong></td>
-          <td>Editor de Apps Script</td>
-          <td>Mantenimiento del código, gestión de la planilla, feriados y backups.</td>
-        </tr>
+        <tr><td><strong>Preceptor/a</strong></td><td>Completo</td><td>Cargar asistencia, adjuntar archivos, imprimir partes diarios.</td></tr>
+        <tr><td><strong>Dirección / Secretaría</strong></td><td>Completo</td><td>Consultar horarios, validar asistencias, gestionar reemplazos.</td></tr>
+        <tr><td><strong>Administrador del sistema</strong></td><td>Editor de Apps Script</td><td>Mantenimiento del código, gestión de la planilla, feriados y backups.</td></tr>
       </tbody>
     </table>
 
@@ -640,17 +711,16 @@
     <h2 id="acceso">2. Cómo acceder</h2>
 
     <div class="access-box">
-      <h4>🔗 Enlace de acceso a la plataforma</h4>
+      <h4>🔗 Enlace de acceso a la plataforma (v2.0)</h4>
       <p>Hacé clic en el botón para ingresar directamente. También podés copiar la URL y guardarla en favoritos.</p>
 
       <span class="access-url">
-        https://script.google.com/macros/s/AKfycbwVTMy8CkzHO8gmyea3c_wBIExItXaNkWGNI-Cyy79TroZq4-LQ6eehKNy98b80Q2nY/exec
+        https://script.google.com/macros/s/AKfycbx4-E-9JUKWeH_NOSKB5vpHF4qXEY6kM2tVP0TWvZKTaCly-6C3zP-79Rf12mR1t14q/exec
       </span>
 
       <a class="btn-access"
-         href="https://script.google.com/macros/s/AKfycbwVTMy8CkzHO8gmyea3c_wBIExItXaNkWGNI-Cyy79TroZq4-LQ6eehKNy98b80Q2nY/exec"
-         target="_blank"
-         rel="noopener">
+         href="https://script.google.com/macros/s/AKfycbx4-E-9JUKWeH_NOSKB5vpHF4qXEY6kM2tVP0TWvZKTaCly-6C3zP-79Rf12mR1t14q/exec"
+         target="_blank" rel="noopener">
         🚀 Ingresar a la plataforma
       </a>
     </div>
@@ -659,7 +729,7 @@
 
     <ol class="steps">
       <li>Abrí el navegador (Chrome, Edge, Firefox o Safari).</li>
-      <li>Ingresá la URL de la aplicación web: <code>https://script.google.com/macros/s/AKfycbwVTMy8CkzHO8gmyea3c_wBIExItXaNkWGNI-Cyy79TroZq4-LQ6eehKNy98b80Q2nY/exec</code> o hacé clic en el botón verde de arriba.</li>
+      <li>Ingresá la URL de la aplicación web: <code>https://script.google.com/macros/s/AKfycbx4-E-9JUKWeH_NOSKB5vpHF4qXEY6kM2tVP0TWvZKTaCly-6C3zP-79Rf12mR1t14q/exec</code> o hacé clic en el botón verde de arriba.</li>
       <li>Si es la primera vez, Google pedirá que inicies sesión con tu cuenta institucional.</li>
       <li>Autorizá los permisos requeridos (Spreadsheets, Drive, identidad).</li>
       <li>Verás la pantalla principal con las pestañas <strong>Horarios Institucionales</strong> y <strong>Control de Asistencia Docente</strong>.</li>
@@ -687,24 +757,16 @@
 
     <p>Para cambiar entre pestañas, hacé clic sobre el botón correspondiente. La pestaña activa se colorea de azul.</p>
 
-    <div class="mockup">
-      [Imagen: dos botones de pestañas, uno azul activo y otro gris inactivo]
-    </div>
-
     <!-- ==================== 4 ==================== -->
     <h2 id="horarios-ver">4. Módulo 1 — Ver y filtrar horarios</h2>
 
-    <h3>4.1 Filtros disponibles</h3>
+    <h3>4.1 Filtros tradicionales de la barra superior</h3>
 
     <p>En la parte superior de la pestaña <strong>Horarios</strong> hay una barra de filtros. Podés combinarlos libremente:</p>
 
     <table>
       <thead>
-        <tr>
-          <th>Filtro</th>
-          <th>Tipo</th>
-          <th>Descripción</th>
-        </tr>
+        <tr><th>Filtro</th><th>Tipo</th><th>Descripción</th></tr>
       </thead>
       <tbody>
         <tr><td><strong>Turno</strong></td><td>Lista</td><td>Mañana, Tarde, Noche o Todos.</td></tr>
@@ -721,36 +783,108 @@
     <p>Hacé clic sobre cualquier encabezado de columna (ID, Turno, Curso, Día, Horario, Materia, Docente) para ordenar la tabla por ese campo. Un segundo clic invierte el orden.</p>
 
     <h3>4.3 Panel lateral de docentes</h3>
-    <p>A la derecha de la grilla hay un panel que muestra la <strong>cantidad total</strong> y el <strong>listado alfabético</strong> de docentes que cumplen con los filtros aplicados. Es útil para saber rápidamente cuántos docentes están afectados a un turno/día.</p>
-
-    <div class="callout callout-info">
-      <strong>💡 Sincronización automática</strong>
-      El panel lateral se actualiza automáticamente cada vez que modificás un filtro. No hace falta refrescar la página.
-    </div>
+    <p>A la derecha de la grilla hay un panel que muestra la <strong>cantidad total</strong> y el <strong>listado alfabético</strong> de docentes que cumplen con los filtros aplicados.</p>
 
     <!-- ==================== 5 ==================== -->
-    <h2 id="horarios-editar">5. Módulo 1 — Agregar y editar clases</h2>
+    <h2 id="filtros-click">5. Módulo 1 — Filtros click-on <span class="nav-badge-nuevo">Nuevo</span></h2>
 
-    <h3>5.1 Agregar una clase nueva</h3>
+    <div class="callout callout-nuevo">
+      <strong>🆕 Función nueva en v2.0</strong>
+      Los filtros click-on permiten filtrar la grilla con un solo clic en cualquier celda, sin escribir nada. Son acumulativos y se combinan con los filtros de la barra superior.
+    </div>
+
+    <h3>5.1 ¿Cómo funcionan?</h3>
+
+    <ol class="steps">
+      <li>Ubicá la celda con el valor que querés filtrar (por ejemplo, <strong>Turno = Mañana</strong>).</li>
+      <li>Hacé clic sobre la celda. Verás cómo aparece un <strong>chip azul</strong> arriba de la tabla con el filtro aplicado.</li>
+      <li>La tabla se reduce automáticamente a los registros que coinciden.</li>
+      <li>Podés combinar varios clics: turno + día + curso, etc.</li>
+      <li>Para quitar un filtro, hacé clic en la <strong>✕</strong> del chip correspondiente.</li>
+      <li>Para quitar todos los filtros de una vez, presioná <strong>"Limpiar todos"</strong>.</li>
+    </ol>
+
+    <h3>5.2 Ejemplo visual de chips activos</h3>
+
+    <div class="mockup" style="text-align:left;">
+      <span class="chip-demo">
+        <span class="chip-col">Turno</span>
+        Mañana
+        <button class="chip-cerrar">✕</button>
+      </span>
+      <span class="chip-demo">
+        <span class="chip-col">Día</span>
+        Lunes
+        <button class="chip-cerrar">✕</button>
+      </span>
+      <span class="chip-demo">
+        <span class="chip-col">Curso</span>
+        1° A
+        <button class="chip-cerrar">✕</button>
+      </span>
+      <span class="chip-limpiar-demo">Limpiar todos</span>
+      <div style="margin-top:10px; font-size:0.78rem; color:#495057;">
+        Mostrando <strong style="color:#389fd6;">3</strong> clase(s)
+      </div>
+    </div>
+
+    <h3>5.3 Casos de uso frecuentes</h3>
+
+    <table>
+      <thead>
+        <tr><th>Querés ver…</th><th>Clics a realizar</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Todas las clases de un docente</td>
+          <td>Clic en el <strong>nombre del docente</strong> en cualquier fila (o en el panel lateral).</td>
+        </tr>
+        <tr>
+          <td>Todo el turno Mañana de los lunes</td>
+          <td>Clic en <strong>Mañana</strong> + clic en <strong>Lunes</strong>.</td>
+        </tr>
+        <tr>
+          <td>Todas las materias de 1° A</td>
+          <td>Clic en cualquier celda <strong>1° A</strong> de la columna Curso.</td>
+        </tr>
+        <tr>
+          <td>Ver solo Matemática</td>
+          <td>Clic en cualquier celda que diga <strong>Matemática</strong>.</td>
+        </tr>
+        <tr>
+          <td>Combinar varios cursos</td>
+          <td>Clic en <strong>1° A</strong> y luego en <strong>2° B</strong>. Se mostrarán ambos.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-info">
+      <strong>💡 Combinación con filtros tradicionales</strong>
+      Los chips trabajan <em>encima</em> de los filtros de la barra superior. Por ejemplo, podés elegir Turno = Mañana en el dropdown y luego clicar "Lunes" en la grilla: el resultado serán solo las clases de Mañana que caen Lunes.
+    </div>
+
+    <h3>5.4 Indicadores visuales</h3>
+
+    <ul>
+      <li><strong>Celdas con fondo azul:</strong> están activas como filtro.</li>
+      <li><strong>Ícono 🔍 al pasar el mouse:</strong> indica que la celda es clickeable.</li>
+      <li><strong>Chips arriba de la tabla:</strong> cada filtro activo con su ✕ para quitarlo.</li>
+      <li><strong>Contador a la derecha:</strong> "Mostrando X clase(s)".</li>
+    </ul>
+
+    <!-- ==================== 6 ==================== -->
+    <h2 id="horarios-editar">6. Módulo 1 — Agregar y editar clases</h2>
+
+    <h3>6.1 Agregar una clase nueva</h3>
 
     <ol class="steps">
       <li>Clic en <strong>➕ Adicionar Clase</strong>.</li>
-      <li>Completá el formulario:
-        <ul>
-          <li><strong>Turno:</strong> Mañana / Tarde / Noche.</li>
-          <li><strong>Curso:</strong> Ej: <code>1° A</code>.</li>
-          <li><strong>Día:</strong> Lunes a Viernes.</li>
-          <li><strong>Inicio:</strong> Formato <code>HH:MM</code> (ej: <code>07:00</code>).</li>
-          <li><strong>Fin:</strong> Formato <code>HH:MM</code> (ej: <code>07:40</code>).</li>
-          <li><strong>Materia:</strong> Nombre de la materia.</li>
-          <li><strong>Docente:</strong> Nombre y apellido del docente.</li>
-        </ul>
-      </li>
+      <li>Completá el formulario: Turno, Curso, Día, Hora de inicio, Hora de fin, Materia y Docente.</li>
       <li>Clic en <strong>Guardar</strong>.</li>
       <li>La tabla se refresca y aparece la nueva fila con un <strong>ID correlativo automático</strong>.</li>
     </ol>
 
-    <h3>5.2 Editar una clase existente</h3>
+    <h3>6.2 Editar una clase existente</h3>
 
     <ol class="steps">
       <li>En la fila que querés modificar, clic en el botón <strong>Editar</strong>.</li>
@@ -763,12 +897,12 @@
       El ID es asignado automáticamente por el sistema y es único. Si necesitás "renumerar" una clase, eliminá el registro y creá uno nuevo.
     </div>
 
-    <!-- ==================== 6 ==================== -->
-    <h2 id="horarios-eliminar">6. Módulo 1 — Eliminar una clase</h2>
+    <!-- ==================== 7 ==================== -->
+    <h2 id="horarios-eliminar">7. Módulo 1 — Eliminar una clase</h2>
 
     <ol class="steps">
       <li>En la fila correspondiente, clic en <strong>Eliminar</strong>.</li>
-      <li>El sistema pide confirmación: <em>"¿Confirma eliminar la clase de [Materia] ([Curso])?"</em></li>
+      <li>El sistema pide confirmación.</li>
       <li>Clic en <strong>Aceptar</strong>.</li>
     </ol>
 
@@ -777,42 +911,37 @@
       Una vez eliminada, la clase no se puede recuperar. Si fue un error, hay que volver a cargarla manualmente.
     </div>
 
-    <!-- ==================== 7 ==================== -->
-    <h2 id="horarios-reemplazo">7. Módulo 1 — Reemplazo masivo de docentes</h2>
+    <!-- ==================== 8 ==================== -->
+    <h2 id="horarios-reemplazo">8. Módulo 1 — Reemplazo masivo de docentes</h2>
 
-    <p>Esta utilidad permite reemplazar un docente por otro en <strong>todas las clases de una misma materia y curso</strong> de una sola vez. Es ideal para licencias prolongadas, suplencias o cambios definitivos.</p>
+    <p>Permite reemplazar un docente por otro en <strong>todas las clases de una misma materia y curso</strong> de una sola vez.</p>
 
     <ol class="steps">
       <li>Clic en <strong>🔄 Reemplazar Docente</strong>.</li>
       <li>Seleccioná el <strong>Curso</strong>.</li>
-      <li>Seleccioná la <strong>Materia</strong>. El sistema mostrará automáticamente el <strong>Docente Actual</strong>.</li>
+      <li>Seleccioná la <strong>Materia</strong>. El sistema muestra el Docente Actual.</li>
       <li>Escribí el <strong>Nuevo Docente</strong>.</li>
       <li>Clic en <strong>Actualizar Docente</strong>.</li>
       <li>El sistema informa cuántos registros fueron actualizados.</li>
     </ol>
 
-    <div class="callout callout-success">
-      <strong>✅ Ejemplo</strong>
-      Si en 3° B la materia "Matemática" aparece 4 veces por semana con el docente "Gómez, Ana", al reemplazarla por "Pérez, Luis" se actualizarán las 4 filas automáticamente.
-    </div>
-
-    <!-- ==================== 8 ==================== -->
-    <h2 id="horarios-imprimir">8. Módulo 1 — Imprimir grilla</h2>
+    <!-- ==================== 9 ==================== -->
+    <h2 id="horarios-imprimir">9. Módulo 1 — Imprimir grilla</h2>
 
     <ol class="steps">
-      <li>Aplicá los filtros deseados (turno, día, curso, etc.).</li>
+      <li>Aplicá los filtros deseados (tradicionales o click-on).</li>
       <li>Clic en <strong>🖨️ Imprimir Horarios</strong>.</li>
-      <li>Se abre el diálogo de impresión del navegador con un diseño limpio (sin botones, sin filtros).</li>
+      <li>Se abre el diálogo de impresión con un diseño limpio.</li>
       <li>Elegí impresora o "Guardar como PDF".</li>
     </ol>
 
     <div class="callout callout-info">
       <strong>💡 Impresión optimizada</strong>
-      El sistema oculta automáticamente botones, filtros y paneles laterales al imprimir. Solo se ve la tabla de horarios.
+      Los chips de filtros y los botones se ocultan automáticamente al imprimir. Solo se ve la tabla de horarios.
     </div>
 
-    <!-- ==================== 9 ==================== -->
-    <h2 id="asist-cargar">9. Módulo 2 — Cargar asistencia docente</h2>
+    <!-- ==================== 10 ==================== -->
+    <h2 id="asist-cargar">10. Módulo 2 — Cargar asistencia docente</h2>
 
     <p>La pestaña <strong>Control de Asistencia Docente</strong> permite registrar quién asistió, quién no y por qué, todos los días por turno.</p>
 
@@ -824,146 +953,143 @@
       <li>Clic en <strong>🔍 Cargar Docentes del Día</strong>.</li>
     </ol>
 
-    <p>Aparecerá una tarjeta por cada docente que tiene clases asignadas <strong>ese día exacto</strong> en ese turno. Cada tarjeta muestra:</p>
-
-    <ul>
-      <li>Nombre del docente.</li>
-      <li>Cantidad de horas cátedra.</li>
-      <li>Listado de clases con materia, curso y horario (ordenadas cronológicamente).</li>
-      <li>Selector de estado y campo de observaciones.</li>
-      <li>Botón <strong>📎</strong> para adjuntar archivos (ver Módulo 3).</li>
-    </ul>
+    <p>Aparecerá una tarjeta por cada docente que tiene clases asignadas <strong>ese día exacto</strong> en ese turno.</p>
 
     <div class="callout callout-info">
-      <strong>💡 Aviso azul de docentes excluidos</strong>
-      Si hay docentes del turno que <strong>no dictan clases ese día</strong>, aparecerá un aviso azul en la parte superior indicando cuántos fueron excluidos y un enlace "Ver detalle" para conocer quiénes son.
+      <strong>💡 Aviso de docentes excluidos</strong>
+      Si hay docentes del turno que no dictan clases ese día, aparecerá un aviso azul indicando cuántos fueron excluidos y un enlace "Ver detalle".
     </div>
 
-    <!-- ==================== 10 ==================== -->
-    <h2 id="asist-estados">10. Módulo 2 — Estados y observaciones</h2>
+    <!-- ==================== 11 ==================== -->
+    <h2 id="asist-estados">11. Módulo 2 — Estados y observaciones</h2>
 
     <p>Cada tarjeta de docente tiene un selector con tres estados posibles, codificados por color:</p>
 
     <table>
       <thead>
-        <tr>
-          <th>Estado</th>
-          <th>Color</th>
-          <th>Uso recomendado</th>
-        </tr>
+        <tr><th>Estado</th><th>Color</th><th>Uso recomendado</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="badge badge-presente">Presente</span></td><td>Verde</td><td>El docente asistió con normalidad.</td></tr>
+        <tr><td><span class="badge badge-ausente">Ausente</span></td><td>Rojo</td><td>El docente no asistió y no presentó justificación.</td></tr>
+        <tr><td><span class="badge badge-licencia">Licencia / Justificado</span></td><td>Amarillo</td><td>El docente avisó o presentó certificado.</td></tr>
+      </tbody>
+    </table>
+
+    <p>El campo <strong>Observaciones</strong> es opcional y de texto libre. Ahí podés anotar motivo, certificado médico, docente suplente, etc.</p>
+
+    <!-- ==================== 12 ==================== -->
+    <h2 id="asist-validacion">12. Módulo 2 — Validación automática de día hábil</h2>
+
+    <p>El sistema detecta automáticamente si la fecha seleccionada es un día hábil.</p>
+
+    <h3>12.1 Semáforo visual</h3>
+
+    <ul>
+      <li><strong>Borde verde + mensaje "✅ [Día]: día hábil":</strong> podés cargar la asistencia normalmente.</li>
+      <li><strong>Borde rojo + mensaje "⛔ [Día]: día no hábil":</strong> no se permite cargar.</li>
+    </ul>
+
+    <h3>12.2 Feriados</h3>
+
+    <p>Si el administrador cargó los feriados en la pestaña <strong>Feriados</strong>, el sistema los detecta y bloquea la carga con el motivo correspondiente.</p>
+
+    <h3>12.3 Bloqueo duro al guardar</h3>
+
+    <p>Aunque intentes forzar el guardado, el backend rechaza cualquier intento de cargar asistencia en un día no hábil.</p>
+
+    <!-- ==================== 13 ==================== -->
+    <h2 id="asist-filtros">13. Módulo 2 — Filtros click-on <span class="nav-badge-nuevo">Nuevo</span></h2>
+
+    <div class="callout callout-nuevo">
+      <strong>🆕 Función nueva en v2.0</strong>
+      En la vista de asistencia también podés filtrar docentes con clics: por nombre, materia o curso. Los filtros se combinan y el sistema muestra solo las tarjetas que coinciden.
+    </div>
+
+    <h3>13.1 ¿Qué se puede clickear?</h3>
+
+    <table>
+      <thead>
+        <tr><th>Elemento</th><th>Acción</th><th>Resultado</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="badge badge-presente">Presente</span></td>
-          <td>Verde</td>
-          <td>El docente asistió con normalidad.</td>
+          <td><strong>👤 Nombre del docente</strong></td>
+          <td>Clic sobre el nombre grande de la tarjeta</td>
+          <td>Filtra solo ese docente</td>
         </tr>
         <tr>
-          <td><span class="badge badge-ausente">Ausente</span></td>
-          <td>Rojo</td>
-          <td>El docente no asistió y no presentó justificación.</td>
+          <td><strong>📚 Materia</strong></td>
+          <td>Clic sobre el nombre de la materia dentro de las horas cátedra</td>
+          <td>Muestra solo docentes que dictan esa materia</td>
         </tr>
         <tr>
-          <td><span class="badge badge-licencia">Licencia / Justificado</span></td>
-          <td>Amarillo</td>
-          <td>El docente avisó, presentó certificado o está de licencia.</td>
+          <td><strong>Curso subrayado</strong></td>
+          <td>Clic sobre el curso (1° A, 2° B, etc.)</td>
+          <td>Muestra solo docentes que dictan en ese curso</td>
         </tr>
       </tbody>
     </table>
 
-    <p>El campo <strong>Observaciones</strong> es opcional y de texto libre. Ahí podés anotar:</p>
+    <h3>13.2 Ejemplo</h3>
 
-    <ul>
-      <li>Motivo de la ausencia ("Avisó por WhatsApp a las 6:30").</li>
-      <li>Número de certificado médico.</li>
-      <li>Horario de llegada tarde.</li>
-      <li>Docente suplente que cubrió las horas.</li>
-    </ul>
+    <p>Si querés saber <strong>qué docentes dictan Matemática en 3° B hoy</strong>:</p>
 
-    <div class="callout callout-warning">
-      <strong>⚠️ Cargá siempre las observaciones</strong>
-      Son la única trazabilidad del motivo cuando la dirección audite las planillas. Si no hay motivo, dejalo en blanco pero asegurate de que el estado sea coherente.
-    </div>
-
-    <!-- ==================== 11 ==================== -->
-    <h2 id="asist-validacion">11. Módulo 2 — Validación automática de día hábil</h2>
-
-    <p>El sistema detecta automáticamente si la fecha seleccionada es un día hábil. Esto evita cargas por error en fines de semana o feriados.</p>
-
-    <h3>11.1 Semáforo visual</h3>
-
-    <ul>
-      <li><strong>Borde verde + mensaje "✅ [Día]: día hábil":</strong> podés cargar la asistencia normalmente.</li>
-      <li><strong>Borde rojo + mensaje "⛔ [Día]: día no hábil":</strong> no se permite cargar. Se muestra una advertencia y no se listan docentes.</li>
-    </ul>
-
-    <h3>11.2 Feriados</h3>
-
-    <p>Si el administrador cargó los feriados en la pestaña <strong>Feriados</strong> de la planilla, el sistema los detecta y bloquea la carga con el motivo correspondiente.</p>
+    <ol class="steps">
+      <li>Cargá la asistencia del día y turno correspondiente.</li>
+      <li>Clic en <strong>Matemática</strong> dentro de cualquier tarjeta.</li>
+      <li>Clic en <strong>3° B</strong> dentro de cualquier tarjeta.</li>
+      <li>El sistema muestra solo los docentes que cumplen ambas condiciones.</li>
+      <li>Para limpiar, clic en <strong>"Limpiar todos"</strong> arriba del listado.</li>
+    </ol>
 
     <div class="callout callout-info">
-      <strong>💡 Ejemplo</strong>
-      Si cargás la fecha 25/05/2026, el sistema mostrará "⛔ Lunes: día no hábil (Feriado: Día de la Revolución de Mayo)". No vas a poder guardar asistencia.
+      <strong>💡 Útil para auditoría</strong>
+      Los filtros click-on permiten rápidamente verificar, por ejemplo, "¿asistió todo el equipo de Matemática?" sin recorrer todas las tarjetas.
     </div>
 
-    <h3>11.3 Bloqueo duro al guardar</h3>
+    <!-- ==================== 14 ==================== -->
+    <h2 id="asist-guardar">14. Módulo 2 — Guardar asistencia</h2>
 
-    <p>Aunque intentes forzar el guardado, el backend rechaza cualquier intento de cargar asistencia en un día no hábil. La operación falla con un mensaje explicativo.</p>
-
-    <!-- ==================== 12 ==================== -->
-    <h2 id="asist-guardar">12. Módulo 2 — Guardar asistencia</h2>
-
-    <p>Una vez que hayas revisado el estado y las observaciones de cada docente:</p>
+    <p>Una vez revisados los estados y observaciones:</p>
 
     <ol class="steps">
       <li>Clic en <strong>💾 Guardar Asistencia en Pestaña del Mes</strong>.</li>
-      <li>El sistema crea (si no existe) la pestaña del mes correspondiente, por ejemplo <code>Octubre 2026</code>.</li>
-      <li>Registra una fila por docente con:
-        <ul>
-          <li>ID de registro único.</li>
-          <li>Fecha, día y turno.</li>
-          <li>Nombre del docente.</li>
-          <li>Horas cátedra y detalle de materias/cursos.</li>
-          <li>Estado y observaciones.</li>
-          <li>Usuario de Google que realizó la carga.</li>
-          <li>Fecha y hora exacta de la carga.</li>
-        </ul>
-      </li>
-      <li>Se confirma con un mensaje verde: <em>"✅ Asistencia guardada en la pestaña [Nombre]".</em></li>
+      <li>El sistema crea (si no existe) la pestaña del mes correspondiente.</li>
+      <li>Registra una fila por docente con todos los datos: fecha, turno, estado, observaciones, usuario y fecha/hora de carga.</li>
+      <li>Se confirma con un mensaje verde.</li>
     </ol>
 
     <div class="callout callout-warning">
       <strong>⚠️ Re-cargas del mismo día/turno</strong>
-      Si ya existía asistencia guardada para esa fecha y turno, el sistema <strong>elimina los registros anteriores</strong> y guarda los nuevos. Esto permite corregir errores sin dejar duplicados.
+      Si ya existía asistencia para esa fecha y turno, el sistema <strong>elimina los registros anteriores</strong> y guarda los nuevos.
     </div>
 
-    <!-- ==================== 13 ==================== -->
-    <h2 id="asist-imprimir">13. Módulo 2 — Imprimir parte diario</h2>
+    <div class="callout callout-info">
+      <strong>💡 Filtros y guardado</strong>
+      Los filtros click-on <strong>NO afectan</strong> el guardado: se guardan todos los docentes del día, tengan o no filtros activos.
+    </div>
+
+    <!-- ==================== 15 ==================== -->
+    <h2 id="asist-imprimir">15. Módulo 2 — Imprimir parte diario</h2>
 
     <ol class="steps">
       <li>Con los docentes cargados en pantalla, clic en <strong>🖨️ Imprimir Reporte</strong>.</li>
-      <li>Se genera un parte formal con:
-        <ul>
-          <li>Encabezado institucional (BOP N° 82).</li>
-          <li>Fecha, día, turno y usuario de carga.</li>
-          <li>Tabla con Docente / Estado / Observaciones.</li>
-          <li>Espacios para firma de Preceptor/a y Dirección/Secretaría.</li>
-        </ul>
-      </li>
+      <li>Se genera un parte formal con encabezado institucional, datos del día y tabla Docente / Estado / Observaciones.</li>
       <li>Se abre el diálogo de impresión.</li>
     </ol>
 
     <div class="callout callout-info">
-      <strong>💡 Formato de impresión</strong>
-      El parte está optimizado para hoja A4 vertical. Los estados aparecen con color: rojo para Ausente, amarillo para Licencia.
+      <strong>💡 Filtros al imprimir</strong>
+      Si tenés filtros click-on activos al momento de imprimir, el parte <strong>solo incluirá los docentes visibles</strong>. Ideal para imprimir reportes parciales (por ejemplo, solo el equipo de un área).
     </div>
 
-    <!-- ==================== 14 ==================== -->
-    <h2 id="adj-cargar">14. Módulo 3 — Cargar un archivo adjunto</h2>
+    <!-- ==================== 16 ==================== -->
+    <h2 id="adj-cargar">16. Módulo 3 — Cargar un archivo adjunto</h2>
 
-    <p>El módulo de adjuntos permite subir <strong>PDF o imágenes</strong> (certificados, licencias, justificaciones, notas) asociados a un docente y una fecha específica.</p>
+    <p>El módulo de adjuntos permite subir <strong>PDF o imágenes</strong> (certificados, licencias, justificaciones, notas) asociados a un docente y una fecha.</p>
 
-    <h3>14.1 Requisitos previos</h3>
+    <h3>16.1 Requisitos previos</h3>
 
     <ul>
       <li>Estar en la pestaña <strong>Control de Asistencia Docente</strong>.</li>
@@ -971,32 +1097,22 @@
       <li>Haber cargado la lista de docentes del día.</li>
     </ul>
 
-    <h3>14.2 Pasos para cargar</h3>
+    <h3>16.2 Pasos para cargar</h3>
 
     <ol class="steps">
       <li>En la tarjeta del docente, clic en el botón <strong>📎</strong> junto a su nombre.</li>
-      <li>Se abre el modal "📎 Adjuntar archivo" con:
-        <ul>
-          <li>Docente, fecha y turno del contexto.</li>
-          <li>Botón para seleccionar archivo.</li>
-          <li>Listado de adjuntos ya cargados para ese docente/fecha.</li>
-        </ul>
-      </li>
+      <li>Se abre el modal "📎 Adjuntar archivo" con el contexto (docente, fecha, turno).</li>
       <li>Clic en <strong>Seleccionar archivo</strong> y elegí el PDF o imagen (máx. 10 MB).</li>
       <li>Verificá la vista previa.</li>
       <li>Clic en <strong>Subir archivo</strong>.</li>
       <li>Esperá la barra de progreso. Aparecerá un mensaje verde de confirmación.</li>
     </ol>
 
-    <h3>14.3 Formatos aceptados</h3>
+    <h3>16.3 Formatos aceptados</h3>
 
     <table>
       <thead>
-        <tr>
-          <th>Formato</th>
-          <th>Extensión</th>
-          <th>Tamaño máximo</th>
-        </tr>
+        <tr><th>Formato</th><th>Extensión</th><th>Tamaño máximo</th></tr>
       </thead>
       <tbody>
         <tr><td>PDF</td><td>.pdf</td><td>10 MB</td></tr>
@@ -1007,130 +1123,93 @@
       </tbody>
     </table>
 
-    <h3>14.4 Nombre del archivo en Drive</h3>
+    <h3>16.4 Nombre del archivo en Drive</h3>
 
-    <p>El sistema renombra automáticamente el archivo antes de subirlo, con el siguiente formato:</p>
+    <p>El sistema renombra automáticamente el archivo antes de subirlo:</p>
 
-    <pre><code>[usuario] - [docente] - [YYYY-MM-DD] - [turno] - [nombreOriginal]</code></pre>
+    <p><code>[usuario] - [docente] - [YYYY-MM-DD] - [turno] - [nombreOriginal]</code></p>
 
     <p>Ejemplo:</p>
 
-    <pre><code>jperez - Gómez, Ana - 2026-10-15 - Mañana - certificado_medico.pdf</code></pre>
-
-    <p>Esto garantiza que en la carpeta compartida se pueda saber <strong>quién subió</strong>, <strong>para qué docente</strong>, <strong>cuándo</strong> y <strong>en qué turno</strong>, incluso meses después.</p>
+    <p><code>jperez - Gómez, Ana - 2026-10-15 - Mañana - certificado_medico.pdf</code></p>
 
     <div class="callout callout-info">
-      <strong>💡 Carpeta destino</strong>
-      Los archivos se alojan en la carpeta compartida <strong>CONSTANCIAS 2026</strong> de Google Drive institucional. Cualquier persona con acceso a esa carpeta puede verlos.
+      <strong>💡 Trazabilidad reforzada (v2.0)</strong>
+      Si el sistema no puede determinar tu identidad de Google, <strong>no guarda el archivo</strong> y te pide reautorizar. Así se evita que se guarden archivos como "usuario-desconocido".
     </div>
 
-    <!-- ==================== 15 ==================== -->
-    <h2 id="adj-ver">15. Módulo 3 — Ver adjuntos cargados</h2>
+    <!-- ==================== 17 ==================== -->
+    <h2 id="adj-ver">17. Módulo 3 — Ver adjuntos cargados</h2>
 
-    <h3>15.1 Badge numérico</h3>
+    <h3>17.1 Badge numérico</h3>
 
-    <p>Junto al nombre del docente, al lado del botón 📎, aparece un <strong>badge azul con un número</strong>. Indica cuántos adjuntos tiene ese docente para la fecha seleccionada. Si no tiene ninguno, el badge se oculta.</p>
+    <p>Junto al nombre del docente aparece un <strong>badge azul con un número</strong> indicando cuántos adjuntos tiene para esa fecha.</p>
 
-    <h3>15.2 Listado dentro del modal</h3>
+    <h3>17.2 Listado dentro del modal</h3>
 
-    <p>Al abrir el modal 📎, en la parte inferior se listan todos los adjuntos ya cargados para ese docente y fecha, con:</p>
+    <p>Al abrir el modal 📎, en la parte inferior se listan todos los adjuntos ya cargados para ese docente y fecha, con enlace directo al archivo.</p>
 
-    <ul>
-      <li>Icono del tipo (📄 PDF / 🖼️ imagen).</li>
-      <li>Nombre del archivo (enlace directo para abrirlo).</li>
-      <li>Usuario que lo subió.</li>
-      <li>Fecha de carga.</li>
-    </ul>
+    <h3>17.3 Acceso directo a Drive</h3>
 
-    <h3>15.3 Acceso directo a Drive</h3>
+    <p>Si querés ver todos los adjuntos de la institución, entrá directamente a la carpeta <strong>CONSTANCIAS 2026</strong> desde Google Drive.</p>
 
-    <p>Si querés ver todos los adjuntos de la institución (no solo de un docente/fecha), entrá directamente a la carpeta <strong>CONSTANCIAS 2026</strong> desde Google Drive. Todos los archivos están ahí, ordenables por fecha y filtrables por nombre.</p>
-
-    <!-- ==================== 16 ==================== -->
-    <h2 id="adj-errores">16. Módulo 3 — Errores frecuentes y cómo resolverlos</h2>
+    <!-- ==================== 18 ==================== -->
+    <h2 id="adj-errores">18. Módulo 3 — Errores frecuentes</h2>
 
     <table>
       <thead>
-        <tr>
-          <th>Error</th>
-          <th>Causa</th>
-          <th>Solución</th>
-        </tr>
+        <tr><th>Error</th><th>Causa</th><th>Solución</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>❌ "Tipo de archivo no permitido"</td>
-          <td>El archivo no es PDF ni imagen.</td>
-          <td>Convertí el archivo a PDF o imagen antes de subirlo.</td>
-        </tr>
-        <tr>
-          <td>❌ "El archivo supera los 10 MB"</td>
-          <td>El archivo es demasiado grande.</td>
-          <td>Comprimí el PDF o reducí la calidad de la imagen.</td>
-        </tr>
-        <tr>
-          <td>❌ "No se pudo acceder a la carpeta de adjuntos"</td>
-          <td>Falta autorización de Drive en el proyecto.</td>
-          <td>Contactá al administrador del sistema para que reautorice el script.</td>
-        </tr>
-        <tr>
-          <td>❌ "El sistema está ocupado"</td>
-          <td>Otro usuario está subiendo un archivo en simultáneo.</td>
-          <td>Esperá unos segundos y reintentá.</td>
-        </tr>
-        <tr>
-          <td>❌ "Error de conexión"</td>
-          <td>Se perdió la conexión a internet.</td>
-          <td>Verificá la conexión y volvé a intentar.</td>
-        </tr>
+        <tr><td>❌ "Tipo de archivo no permitido"</td><td>El archivo no es PDF ni imagen.</td><td>Convertí el archivo a PDF o imagen.</td></tr>
+        <tr><td>❌ "El archivo supera los 10 MB"</td><td>Archivo demasiado grande.</td><td>Comprimí el PDF o reducí la imagen.</td></tr>
+        <tr><td>❌ "No se pudo determinar tu identidad de Google"</td><td>Sesión con múltiples cuentas o sin autorizar.</td><td>Cerrá sesión en todas las cuentas, entrá solo con la institucional y autorizá cuando se solicite.</td></tr>
+        <tr><td>❌ "El sistema está ocupado"</td><td>Otro usuario subiendo en simultáneo.</td><td>Esperá unos segundos y reintentá.</td></tr>
+        <tr><td>❌ "Error de conexión"</td><td>Se perdió la conexión a internet.</td><td>Verificá la conexión y volvé a intentar.</td></tr>
       </tbody>
     </table>
 
-    <!-- ==================== 17 ==================== -->
-    <h2 id="preguntas">17. Preguntas frecuentes</h2>
+    <!-- ==================== 19 ==================== -->
+    <h2 id="preguntas">19. Preguntas frecuentes</h2>
 
     <h4>¿Puedo cargar asistencia de un día pasado?</h4>
-    <p>Sí, siempre que sea un día hábil. Seleccioná la fecha pasada y cargá normalmente. El sistema registra la marca de tiempo real del momento de carga.</p>
+    <p>Sí, siempre que sea un día hábil. El sistema registra la marca de tiempo real del momento de carga.</p>
 
     <h4>¿Qué pasa si me equivoqué en un estado ya guardado?</h4>
-    <p>Volvé a seleccionar la fecha y turno, corregí el estado y guardá de nuevo. El sistema elimina los registros anteriores de esa fecha/turno y guarda los nuevos.</p>
+    <p>Volvé a seleccionar la fecha y turno, corregí el estado y guardá de nuevo. El sistema elimina los registros previos de esa fecha/turno.</p>
+
+    <h4>¿Los filtros click-on afectan el guardado de asistencia?</h4>
+    <p>No. Los filtros son solo visuales. Al guardar, se guardan todos los docentes del día, tengan o no filtros activos.</p>
+
+    <h4>¿Puedo combinar filtros click-on con filtros de la barra superior?</h4>
+    <p>Sí. Se combinan automáticamente. Los chips trabajan encima de los filtros tradicionales.</p>
+
+    <h4>¿Los filtros se guardan al recargar la página?</h4>
+    <p>No. Los filtros se reinician al recargar. Es intencional: cada sesión empieza limpia.</p>
 
     <h4>¿Puedo cargar asistencia desde el celular?</h4>
-    <p>Sí. La plataforma es responsiva. Sin embargo, para adjuntar archivos y visualizar tablas grandes se recomienda usar una computadora.</p>
-
-    <h4>¿Los archivos adjuntos se pueden eliminar?</h4>
-    <p>No desde la plataforma. Si hay que eliminar un archivo, hay que hacerlo directamente en la carpeta <strong>CONSTANCIAS 2026</strong> de Drive (solo usuarios con permiso de edición).</p>
-
-    <h4>¿Qué pasa si dos personas cargan asistencia al mismo tiempo?</h4>
-    <p>El sistema usa un bloqueo (lock) que evita conflictos al guardar. La última carga prevalece, eliminando los registros anteriores del mismo día/turno.</p>
+    <p>Sí. La plataforma es responsiva. Los filtros click-on funcionan con tap. Sin embargo, para tablas grandes se recomienda una computadora.</p>
 
     <h4>¿Puedo ver quién cargó qué?</h4>
-    <p>Sí. Cada fila de la planilla mensual registra el email del usuario que cargó y la fecha/hora exacta de la operación.</p>
-
-    <h4>¿Qué pasa si un docente no aparece en el listado?</h4>
-    <p>Puede ser por dos motivos: (1) no tiene clases asignadas ese día en ese turno — verificá en el módulo de Horarios; o (2) el nombre está mal escrito en la planilla. Verificá ambas cosas.</p>
-
-    <h4>¿Se puede usar en varios dispositivos al mismo tiempo?</h4>
-    <p>Sí. La plataforma está pensada para uso concurrente. El lock solo aplica al momento de guardar (unos milisegundos).</p>
+    <p>Sí. Cada fila de la planilla mensual registra el email del usuario que cargó y la fecha/hora exacta.</p>
 
     <h4>¿Los datos están respaldados?</h4>
     <p>Google Sheets tiene historial de versiones ilimitado. Cualquier administrador puede restaurar una versión anterior desde <em>Archivo → Historial de versiones</em>.</p>
 
     <h4>¿Cómo agrego un feriado?</h4>
-    <p>Solo el administrador puede hacerlo, agregando una fila en la pestaña <strong>Feriados</strong> de la planilla. Formato: <code>Fecha (YYYY-MM-DD) | Motivo</code>.</p>
+    <p>Solo el administrador puede hacerlo, agregando una fila en la pestaña <strong>Feriados</strong>. Formato: <code>Fecha (YYYY-MM-DD) | Motivo</code>.</p>
 
     <h4>¿Qué hago si olvidé la URL de la plataforma?</h4>
-    <p>La URL siempre es la misma y no cambia: <code>https://script.google.com/macros/s/AKfycbwVTMy8CkzHO8gmyea3c_wBIExItXaNkWGNI-Cyy79TroZq4-LQ6eehKNy98b80Q2nY/exec</code>. Podés volver a este manual para recuperarla o pedírsela al administrador.</p>
+    <p>La URL actualizada es:<br>
+    <code>https://script.google.com/macros/s/AKfycbx4-E-9JUKWeH_NOSKB5vpHF4qXEY6kM2tVP0TWvZKTaCly-6C3zP-79Rf12mR1t14q/exec</code><br>
+    Podés volver a este manual para recuperarla o pedírsela al administrador.</p>
 
-    <!-- ==================== 18 ==================== -->
-    <h2 id="glosario">18. Glosario</h2>
+    <!-- ==================== 20 ==================== -->
+    <h2 id="glosario">20. Glosario</h2>
 
     <table>
       <thead>
-        <tr>
-          <th>Término</th>
-          <th>Significado</th>
-        </tr>
+        <tr><th>Término</th><th>Significado</th></tr>
       </thead>
       <tbody>
         <tr><td><strong>Turno</strong></td><td>Franja horaria: Mañana, Tarde o Noche.</td></tr>
@@ -1139,16 +1218,18 @@
         <tr><td><strong>Parte diario</strong></td><td>Reporte formal de asistencia de un día específico.</td></tr>
         <tr><td><strong>Adjunto</strong></td><td>Archivo PDF o imagen vinculado a un docente/fecha.</td></tr>
         <tr><td><strong>Día hábil</strong></td><td>Lunes a viernes, excepto feriados.</td></tr>
-        <tr><td><strong>Pestaña mensual</strong></td><td>Hoja de cálculo donde se guarda la asistencia de un mes (ej: "Octubre 2026").</td></tr>
+        <tr><td><strong>Pestaña mensual</strong></td><td>Hoja de cálculo donde se guarda la asistencia de un mes.</td></tr>
         <tr><td><strong>Badge</strong></td><td>Indicador visual numérico o de color.</td></tr>
         <tr><td><strong>Modal</strong></td><td>Ventana emergente dentro de la aplicación.</td></tr>
+        <tr><td><strong>Chip</strong></td><td>Etiqueta visual que representa un filtro activo (nuevo en v2.0).</td></tr>
+        <tr><td><strong>Filtro click-on</strong></td><td>Filtro que se activa haciendo clic en una celda o elemento (nuevo en v2.0).</td></tr>
         <tr><td><strong>Scope</strong></td><td>Permiso que Google otorga a la aplicación.</td></tr>
         <tr><td><strong>Web App</strong></td><td>Aplicación web publicada desde Google Apps Script.</td></tr>
       </tbody>
     </table>
 
-    <!-- ==================== 19 ==================== -->
-    <h2 id="soporte">19. Soporte técnico</h2>
+    <!-- ==================== 21 ==================== -->
+    <h2 id="soporte">21. Soporte técnico</h2>
 
     <p>Ante cualquier inconveniente técnico, comunicate con:</p>
 
@@ -1177,9 +1258,8 @@
       <p>Recordá que podés ingresar en cualquier momento desde el siguiente botón:</p>
 
       <a class="btn-access"
-         href="https://script.google.com/macros/s/AKfycbwVTMy8CkzHO8gmyea3c_wBIExItXaNkWGNI-Cyy79TroZq4-LQ6eehKNy98b80Q2nY/exec"
-         target="_blank"
-         rel="noopener">
+         href="https://script.google.com/macros/s/AKfycbx4-E-9JUKWeH_NOSKB5vpHF4qXEY6kM2tVP0TWvZKTaCly-6C3zP-79Rf12mR1t14q/exec"
+         target="_blank" rel="noopener">
         🚀 Ingresar a la plataforma
       </a>
     </div>
@@ -1188,7 +1268,7 @@
 
     <p style="text-align: center; color: var(--texto-suave); font-size: 0.85rem;">
       <strong>Manual de Uso — Plataforma Escolar BOP N° 82</strong><br>
-      Versión 1.1 · Año 2026 · Documento institucional
+      Versión 2.0 · Año 2026 · Documento institucional
     </p>
 
   </main>
@@ -1197,13 +1277,11 @@
 <button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
 <script>
-  // Mostrar botón "volver arriba" al scrollear
   window.addEventListener('scroll', function () {
     var btn = document.getElementById('topBtn');
     btn.style.display = window.scrollY > 400 ? 'block' : 'none';
   });
 
-  // Smooth scroll para anclas del sidebar
   document.querySelectorAll('.sidebar nav a').forEach(function (link) {
     link.addEventListener('click', function (e) {
       var target = document.querySelector(this.getAttribute('href'));
